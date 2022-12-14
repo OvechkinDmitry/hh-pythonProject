@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hhproj</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+ <header class="header">
+     <div class="header__container">HH PROJECT</div>
+ </header>
+ <main class="main">
+     <nav class="sidebar">
+        <ul class="sidebar__list">
+            <li><a class="sidebar__item" href="{% url 'home' %}">Главная</a></li>
+            <li><a class="sidebar__item" href="{% url 'demand' %}">Востребованность</a></li>
+            <li><a class="sidebar__item" href="">География</a></li>
+            <li><a class="sidebar__item" href="">Навыки</a></li>
+            <li><a class="sidebar__item" href="">Последние вакансии</a></li>
+        </ul>
+    </nav>
+     <div class="main__content">
+         {% block content %}
+         {% endblock %}
+     </div>
+ </main>
+ <footer class="footer">
+     <div class="footer__container">
+         Овечкин Дмитрий РИ-210941
+     </div>
+ </footer>
+</body>
+</html>
