@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <title>hhproj</title>
     <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block main_css %}{% endblock %}
 </head>
 <body>
- <header class="header">
-     <div class="header__container">HH PROJECT</div>
- </header>
+<div class="wrapper">
+    <div class="header">
+     <div class="header__container _container">HH PROJECT</div>
+ </div>
  <main class="main">
-     <nav class="sidebar">
+    <div class="main__container _container">
+        <nav class="sidebar">
         <ul class="sidebar__list">
             <li><a class="sidebar__item" href=" {% url 'home' %} ">Главная</a></li>
             <li><a class="sidebar__item" href=" {% url 'demand' %} ">Востребованность</a></li>
@@ -24,11 +29,15 @@
          {% block content %}
          {% endblock %}
      </div>
+    </div>
+
  </main>
  <footer class="footer">
      <div class="footer__container">
          Овечкин Дмитрий РИ-210941
      </div>
  </footer>
+</div>
+
 </body>
 </html>
