@@ -3,41 +3,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>hhproj</title>
-    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static 'main/css/layout.css' %}>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     {% block main_css %}{% endblock %}
+    <title>Document</title>
 </head>
 <body>
-<div class="wrapper">
-    <div class="header">
-     <div class="header__container _container">Analyst</div>
- </div>
- <main class="main">
-    <div class="main__container _container">
-        <nav class="sidebar">
-        <ul class="sidebar__list">
-            <li><a class="sidebar__item" href=" {% url 'home' %} ">Главная</a></li>
-            <li><a class="sidebar__item" href=" {% url 'demand' %} ">Востребованность</a></li>
-            <li><a class="sidebar__item" href=" {% url 'geography' %} ">География</a></li>
-            <li><a class="sidebar__item" href=" {% url 'skills' %} ">Навыки</a></li>
-            <li><a class="sidebar__item" href=" {% url 'last_vacancies' %} ">Последние вакансии</a></li>
-        </ul>
-    </nav>
-     <div class="main__content">
-         {% block content %}
-         {% endblock %}
-     </div>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container _container">
+                <div class="header__menu-button">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="header__menu-container">
+                    <div class="header__menu">
+                        <div class="header__menu-body">
+                            <div class="close__menu">
+                                <i class='bx bx-plus' style="transform: rotate(45deg);"></i>
+                            </div>
+                            <ul class="header__list">
+                                <li class="header__logo-item">HH-PROJECT</li>
+                                <li class="header__menu-item"><a href="{% url 'home' %}">ГЛАВНАЯ</a></li>
+                                <li class="header__menu-item"><a href="{% url 'demand' %}">ВОСТРЕБОВАННОСТЬ</a></li>
+                                <li class="header__menu-item"><a href="{% url 'geography' %}">ГЕОГРАФИЯ</a></li>
+                                <li class="header__menu-item"><a href="{% url 'skills' %}">НАВЫКИ</a></li>
+                                <li class="header__menu-item"><a href="{% url 'last_vacancies' %}">ПОСЛЕДНИЕ ВАКАНСИИ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__logo">hh project</div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container _container">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__container _container">
+                Овечкин Дмитрий РИ-210941
+            </div>
+        </footer>
     </div>
-
- </main>
- <footer class="footer">
-     <div class="footer__container">
-         Овечкин Дмитрий РИ-210941
-     </div>
- </footer>
-</div>
-
+    <script src={% static 'main/js/script.js' %}></script>
 </body>
 </html>
