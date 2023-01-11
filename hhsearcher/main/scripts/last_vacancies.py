@@ -32,8 +32,6 @@ class hh_parser:
         self.info = {'name': [], "salary": [],
                      'area_name': [], 'published_at': [], "employer_name": [],
                      "snippet_requirement": [], "snippet_responsibility": [], }
-        print(self.day)
-        print(self.next_day)
 
     def fetch_data(self):
         """Запрашивает данные с сайта hh.ru и записывает их в словарь"""

@@ -1,5 +1,17 @@
 {% extends 'main/layout.html' %}
+{% load static %}
+{% block demand %}
+    <link rel="stylesheet" href='{% static "main/css/demand.css" %}'>
+{% endblock %}
 
 {% block content %}
-<h1>Востребованные</h1>
+{% autoescape off %}
+  {% for d in demand  %}
+    <div class="demand__info">
+        <div class="demand__photo"><img src="{{ d.graph_image.url }}"></div>
+        <div class="demand__title">Данные о востребованности вакансии аналитик по годам</div>
+    </div>
+    {{ d.html }}
+{% endfor %}
+{% endautoescape %}
 {% endblock %}

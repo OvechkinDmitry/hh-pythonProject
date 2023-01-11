@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
+
+from .models import *
 from .scripts.last_vacancies import hh_parser
 from django.http import HttpResponse
 
@@ -7,7 +9,11 @@ def index(request):
     return render(request, 'main/index.html')
 
 def demand(request):
-    return render(request, 'main/demand.html')
+    demand = Demand.objects.all()
+    context = {
+        'demand': demand
+    }
+    return render(request, 'main/demand.html', context)
 
 def geography(request):
     return render(request, 'main/geography.html')
