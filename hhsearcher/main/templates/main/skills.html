@@ -1,5 +1,20 @@
 {% extends 'main/layout.html' %}
+{% load static %}
+{% block skills %}
+    <link rel="stylesheet" href='{% static "main/css/skills.css" %}'>
+{% endblock %}
 
 {% block content %}
-<h1>Навыки</h1>
+{% autoescape off %}
+  <div class="skills__title">Топ навыков вакансии аналитик по годам</div>
+  {% for s in skills  %}
+        <div class="_title">{{ s.year }}</div>
+        <div class="skills__info">
+            {{ s.table }}
+            <div class="skills_image">
+                <img src="{{ s.graph_image.url }}">
+            </div>
+        </div>
+  {% endfor %}
+{% endautoescape %}
 {% endblock %}

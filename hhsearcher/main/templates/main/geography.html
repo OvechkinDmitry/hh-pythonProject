@@ -1,5 +1,20 @@
 {% extends 'main/layout.html' %}
+{% load static %}
+{% block geography %}
+    <link rel="stylesheet" href='{% static "main/css/geography.css" %}'>
+{% endblock %}
 
 {% block content %}
-<h1>Георграфия</h1>
+{% autoescape off %}
+  {% for g in geography  %}
+    <div class="geography__info">
+        <div class="geography__photo"><img src="{{ g.graph_image.url }}"></div>
+        <div class="geography__title">Данные о географии вакансии аналитик</div>
+    </div>
+    <div class="tabels">
+        {{ g.table_one }}
+        {{ g.table_two }}
+    </div>
+{% endfor %}
+{% endautoescape %}
 {% endblock %}

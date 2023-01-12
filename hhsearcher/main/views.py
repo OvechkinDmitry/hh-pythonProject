@@ -13,13 +13,21 @@ def demand(request):
     context = {
         'demand': demand
     }
-    return render(request, 'main/demand.html', context)
+    return render(request, 'main/demand.html', context=context)
 
 def geography(request):
-    return render(request, 'main/geography.html')
+    geography = Geography.objects.all()
+    context = {
+        'geography': geography
+    }
+    return render(request, 'main/geography.html', context=context)
 
 def skills(request):
-    return render(request, 'main/skills.html')
+    skills = Skills.objects.all()
+    context = {
+        'skills': skills
+    }
+    return render(request, 'main/skills.html', context=context)
 
 def last_vacancies(request):
     if request.method == 'POST':

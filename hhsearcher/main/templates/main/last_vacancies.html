@@ -23,8 +23,8 @@
                             <span>{{ vacancy.area_name }}</span>
                             <span>{{ vacancy.published_at }}</span>
                             </div>
-                        <div class="vacancy__description">{{ vacancy.snippet_responsibility }}</div>
-                        <div class="vacancy__skills">{{ vacancy.snippet_requirement }}</div>
+                        <div class="vacancy__description"><span>Описание: </span>{{ vacancy.snippet_responsibility }}</div>
+                        <div class="vacancy__skills"><span>Требуемые навыки: </span>{{ vacancy.snippet_requirement }}</div>
              </div>
         {% endfor %}
     {% endif %}

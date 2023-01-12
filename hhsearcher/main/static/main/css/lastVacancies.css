@@ -23,6 +23,10 @@
     color: #0C0C10;
     margin-bottom: 10px;
 }
+.vacancy__description span, .vacancy__skills span{
+   font-size: inherit;
+   font-weight: 700;
+}
 .vacancy__skills {
 }
 .vacancy__additional span{
