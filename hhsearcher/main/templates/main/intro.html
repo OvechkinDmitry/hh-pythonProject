@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block main_css %}
+    <link rel="stylesheet" href='{% static "main/css/intro.css" %}'>
+{% endblock %}
+
+
+{% block content %}
+               <div class="main__intro intro">
+                    <div class="intro__info">
+                        <div class="main__title _title">{{ aboutPage.title }}</div>
+                        <div class="main__subtitle">{{ aboutPage.subtitle }}</div>
+                    </div>
+                    <div class="intro__image">
+                        <img class="intro__phones" src={% static 'main/img/image.png' %}>
+                    </div>
+               </div>
+                <div class="main__facts">
+                 <div class="main__facts-cards facts-cards">
+                        {% for card in introFacts%}
+                        <div class="facts-cards__card">
+                            <div class="facts-cards__title">{{ card.title }}</div>
+                            <div class="facts-cards__subtitle">{{ card.content }}</div>
+                        </div>
+                    {% endfor %}
+                 </div>
+                </div>
+                <div class="main__analyst-types analyst-types">
+                    <div class="analyst-types__title _title">Какие бывают аналитики</div>
+                <div class="analyst-types__cards">
+                    {% for card in introCards%}
+                    <div class="analyst-types__card">
+                        <div class="analyst-types__card-title">{{ card.title }}</div>
+                        <div class="analyst-types__card-subtitle">{{ card.content }}</div>
+                        <div class="analyst-types__number">{{ card.number }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                    <div class="analyst-types__comment">
+                        на сайте представлены лишь некоторые виды *
+                    </div>
+                </div>
+{% endblock %}

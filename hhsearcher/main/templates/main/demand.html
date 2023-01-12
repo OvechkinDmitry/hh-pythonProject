@@ -9,7 +9,7 @@
   {% for d in demand  %}
     <div class="demand__info">
         <div class="demand__photo"><img src="{{ d.graph_image.url }}"></div>
-        <div class="demand__title">Данные о востребованности вакансии аналитик по годам</div>
+        <div class="demand__title">{{ aboutPage.title }}</div>
     </div>
     {{ d.html }}
 {% endfor %}

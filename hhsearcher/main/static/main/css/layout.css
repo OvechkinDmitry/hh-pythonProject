@@ -116,7 +116,7 @@ body{
 }
 .header {
     background: #F9F9F9;
-    box-shadow: 0px 4px 6px rgba(12, 12, 16, 0.09);
+    box-shadow: 0 4px 6px rgba(12, 12, 16, 0.09);
 }
 .header__container {
     height: 98px;
@@ -149,7 +149,7 @@ body{
     font-weight: 600;
     font-size: 21px;
     line-height: 114.97%;
-    width: 25%;
+    width: 23%;
     height: 100%;
     background: white;
     padding: 24px 60px 0 0;
@@ -159,7 +159,6 @@ body{
     transform: translateX(0);
 }
 .header li{
-
 }
 .header__menu-body {
     margin-top: 176px;
@@ -204,6 +203,43 @@ body{
 }
 .main__container {
 }
+@keyframes reveal {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal-reverse{
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+@keyframes from-bottom{
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 
 .main {
 }

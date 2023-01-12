@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://www.iconpacks.net/icons/1/free-pie-chart-icon-683-thumb.png">
     <link rel="stylesheet" href={% static 'main/css/layout.css' %}>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     {% block main_css %}{% endblock %}
@@ -12,7 +13,7 @@
     {% block demand %}{% endblock %}
     {% block geography %}{% endblock %}
     {% block skills %}{% endblock %}
-    <title>HH PROJECT</title>
+    <title>Analyst Profession</title>
 </head>
 <body>
     <div class="wrapper">
@@ -28,7 +29,7 @@
                                 <i class='bx bx-plus' style="transform: rotate(45deg);"></i>
                             </div>
                             <ul class="header__list">
-                                <li class="header__logo-item">HH-PROJECT</li>
+                                <li class="header__logo-item">Analyst Profession</li>
                                 <li class="header__menu-item"><a href="{% url 'home' %}">ГЛАВНАЯ</a></li>
                                 <li class="header__menu-item"><a href="{% url 'demand' %}">ВОСТРЕБОВАННОСТЬ</a></li>
                                 <li class="header__menu-item"><a href="{% url 'geography' %}">ГЕОГРАФИЯ</a></li>
@@ -38,11 +39,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="header__logo">hh project</div>
+                <div class="header__logo">Analyst Profession</div>
             </div>
         </header>
         <main class="main">
-            <div class="main__container _container">
+            <div class="main__container _container _animation-from-bottom">
                 {% block content %}
                 {% endblock %}
             </div>

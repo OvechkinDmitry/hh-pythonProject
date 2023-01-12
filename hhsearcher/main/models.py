@@ -37,6 +37,18 @@ class Skills(models.Model):
 
     def __str__(self):
         return self.year
+class AboutPage(models.Model):
+    page = models.CharField(blank=False, default='', max_length=225)
+    title = models.CharField(blank=False, default='', max_length=225)
+    subtitle = models.TextField(blank=True, default='')
+
+    class Meta:
+        verbose_name = 'AboutPage'
+        verbose_name_plural = 'AboutPage'
+
+    def __str__(self):
+        return self.page
+
 
 class IntroCards(models.Model):
     title = models.CharField(blank=False, default='', max_length=225)
@@ -50,3 +62,16 @@ class IntroCards(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class IntroFacts(models.Model):
+    title = models.CharField(blank=False, default='', max_length=225)
+    content = models.TextField(blank=False, default='')
+
+    class Meta:
+        verbose_name = 'IntroFacts'
+        verbose_name_plural = 'IntroFacts'
+
+
+    def __str__(self):
+        return "факт : " + self.title

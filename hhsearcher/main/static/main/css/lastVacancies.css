@@ -1,3 +1,7 @@
+.last-vacancies__body{
+    animation: appear;
+    animation-duration: 2s;
+}
 .vacancies__cards {
     display: flex;
     flex-direction: column;

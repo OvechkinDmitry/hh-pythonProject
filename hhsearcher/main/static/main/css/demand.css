@@ -6,6 +6,8 @@ table{
  box-shadow: 0 2px 15px rgba(64,64,64,.7);
  border-radius: 12px 12px 0 0;
  overflow: hidden;
+ animation: from-bottom;
+ animation-duration: 2s;
 }
 .demand__info{
   display: flex;
@@ -13,6 +15,8 @@ table{
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  animation: from-bottom;
+  animation-duration: 2s;
 }
 .demand__photo{
     align-self: center;

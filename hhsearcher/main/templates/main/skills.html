@@ -6,15 +6,19 @@
 
 {% block content %}
 {% autoescape off %}
-  <div class="skills__title">Топ навыков вакансии аналитик по годам</div>
-  {% for s in skills  %}
-        <div class="_title">{{ s.year }}</div>
-        <div class="skills__info">
-            {{ s.table }}
-            <div class="skills_image">
-                <img src="{{ s.graph_image.url }}">
+  <div class="skills__title">{{ aboutPage.title }}</div>
+  <div class="skills">
+    {% for s in skills  %}
+        <div class="skill__year">
+            <div class="_title">{{ s.year }}</div>
+            <div class="skills__info">
+                {{ s.table }}
+                <div class="skills_image">
+                    <img src="{{ s.graph_image.url }}">
+                </div>
             </div>
         </div>
   {% endfor %}
+  </div>
 {% endautoescape %}
 {% endblock %}

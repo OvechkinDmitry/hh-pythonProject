@@ -33,9 +33,9 @@ tr:nth-child(even){
     gap: 30px;
     height: max-content;
 }
+
 .skills_image{
    align-self: center;
-   /*width: 1800px;*/
    width: auto;
    height: 480px;
 }
@@ -44,4 +44,16 @@ tr:nth-child(even){
    height: 100%;
 }
 td{
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+.skill__year:nth-child(odd){
+    animation: reveal;
+    animation-duration: 2.3s;
+}
+.skill__year:nth-child(even){
+    animation: reveal-reverse;
+    animation-duration: 2.3s;
 }
