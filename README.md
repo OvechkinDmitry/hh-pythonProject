@@ -1,11 +1,10 @@
-<style>
+<style style="display: none">
     img{
         margin: 10px 10px;
       }
     h1,h3{
         text-align: center;
     }
-
 </style>
 
 <h1>Analyst Profession</h1>
