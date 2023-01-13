@@ -1,4 +1,4 @@
-<h1>Analyst Profession</h1>
+<h1 style="text-align: center">Analyst Profession</h1>
 <p style="font-size: 14px; text-align: center"><a href="https://dmitryovechkin.pythonanywhere.com/">Analyst Profession</a>
 предоставляет полную информацию о профессии аналитик.
 </p>
