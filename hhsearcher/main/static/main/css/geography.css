@@ -32,8 +32,8 @@ tr:nth-child(even){
 }
 .geography__photo{
     align-self: center;
-    width: 1300px;
-    height: 480px;
+    width: 80%;
+    height: 400px;
 }
 .geography__info img{
     width: 100%;
